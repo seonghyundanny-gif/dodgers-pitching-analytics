@@ -1,0 +1,11 @@
+* text=auto
+
+# Preserve deterministic line endings while allowing empty trailing data fields.
+*.csv text eol=lf -whitespace
+
+# Generated analysis artifacts are binary.
+*.docx binary
+*.pdf binary
+*.png binary
+*.twbx binary
+*.xlsx binary

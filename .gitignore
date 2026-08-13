@@ -1,0 +1,53 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# JavaScript dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local assistant/session state
+.claude/
+.codex/
+
+# Generated databases and query caches (rebuild with `make database`)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Archives and local downloads
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Temporary build/render artifacts
+page-*.jpg
+*_output.txt
+build/
+dist/
+*.egg-info/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local secrets
+.env
+.env.*
+!.env.example

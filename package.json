@@ -1,0 +1,12 @@
+{
+  "name": "dodgers-pitching-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Document-generation dependency for Dodgers pitching analytics.",
+  "scripts": {
+    "build:report": "node scripts/report/build_report.js"
+  },
+  "dependencies": {
+    "docx": "9.7.1"
+  }
+}
