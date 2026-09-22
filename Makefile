@@ -5,13 +5,11 @@ PIP ?= $(PYTHON) -m pip
 NPM ?= npm
 NODE ?= node
 
-.PHONY: help setup data database sql analysis report test lint check reproduce
+.PHONY: help setup data analysis report test lint check reproduce
 
 help:
 	@echo "setup      Install Python and Node dependencies"
 	@echo "data       Build and validate processed analysis datasets"
-	@echo "database   Rebuild the generated SQLite database"
-	@echo "sql        Run the documented SQL hypothesis queries"
 	@echo "analysis   Run the player, diagnostic, team, bridge, and DiD analyses"
 	@echo "report     Rebuild figures, workbook, DOCX, and PDF report"
 	@echo "test       Run the automated test suite"
@@ -30,12 +28,6 @@ data:
 	$(PYTHON) scripts/prepare/build_datasets.py
 	$(PYTHON) scripts/analyze/build_comparable_teams_panel.py
 	$(PYTHON) scripts/prepare/validate_data.py
-
-database:
-	$(PYTHON) scripts/prepare/build_sqlite_db.py
-
-sql: database
-	$(PYTHON) scripts/prepare/run_sql_queries.py
 
 analysis:
 	$(PYTHON) scripts/analyze/regression_analysis.py
@@ -67,4 +59,4 @@ lint:
 
 check: lint test
 
-reproduce: data sql analysis report test
+reproduce: data analysis report test

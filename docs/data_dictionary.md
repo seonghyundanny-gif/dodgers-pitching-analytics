@@ -112,4 +112,3 @@ The `data/snapshots/` directory preserves inherited analysis artifacts for audit
 | `attendance_postseason.csv` | team-season | Road attendance and postseason home games |
 | `cbt_tax.csv` | team-season | CBT threshold/payroll/tax results |
 | `injured_salary_loss.csv` | team-season | Salary-weighted IL-day estimate |
-| `dodgers_analysis.db` | SQLite database | Snapshot used for SQL exploration; reproducible and not authoritative |

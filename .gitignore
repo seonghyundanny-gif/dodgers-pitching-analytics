@@ -20,12 +20,6 @@ yarn-error.log*
 .claude/
 .codex/
 
-# Generated databases and query caches (rebuild with `make database`)
-*.db
-*.db-journal
-*.sqlite
-*.sqlite3
-
 # Archives and local downloads
 *.zip
 *.tar

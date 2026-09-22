@@ -9,12 +9,11 @@ UTF-8 with a byte-order mark so they open cleanly in Excel.
 
 | Directory | Purpose | Git policy |
 |---|---|---|
-| `processed/` | Small, analysis-ready tables used by scripts, tests, SQL, and Tableau | Tracked |
+| `processed/` | Small, analysis-ready tables used by scripts, tests, and Tableau | Tracked |
 | `snapshots/` | Frozen intermediate/source snapshots retained for auditability | Tracked when redistribution is allowed |
 | `raw/` | Downloads from upstream providers | Not assumed redistributable; see source notes before adding |
 
-Generated SQLite files are intentionally ignored. Recreate them with `make database`.
-Downloaded ZIP archives, caches, and dependency directories are also ignored.
+Downloaded ZIP archives, caches, and dependency directories are ignored.
 
 ## Processed datasets
 

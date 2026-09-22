@@ -1,6 +1,6 @@
 # Dodgers Pitching Analytics
 
-**Do harder-throwing pitchers create enough performance value to justify greater injury risk?** This project studies 221 Los Angeles Dodgers pitcher-seasons and a six-team financial panel using Python, SQL, Excel, Tableau, and exploratory econometrics.
+**Do harder-throwing pitchers create enough performance value to justify greater injury risk?** This project studies 221 Los Angeles Dodgers pitcher-seasons and a six-team financial panel using Python, Excel, Tableau, and exploratory econometrics.
 
 > **한국어 요약:** LA 다저스 투수의 구속, 부상일수, WAR 효율 간의 관계와 2024년 이후 구단 재무 변화를 분석한 데이터 분석 포트폴리오입니다. 구속은 부상 위험과 정규시즌 효율 모두와 양(+)의 관계를 보였지만, 관찰자료이므로 인과관계로 단정하지 않습니다. 2026년 재무 수치는 시즌 진행 중 잠정 추정치입니다.
 
@@ -61,10 +61,9 @@ See [Methodology](docs/methodology.md), [Limitations](docs/limitations.md), and 
 ├── reports/                 # PDF, Excel, executive summary, and figures
 ├── scripts/
 │   ├── collect/             # API and web-table collection
-│   ├── prepare/             # cleaning, merging, validation, SQLite
+│   ├── prepare/             # cleaning, merging, and validation
 │   ├── analyze/             # regression and DiD analyses
 │   └── report/              # chart and report generation
-├── sql/                     # hypothesis queries
 └── tests/                   # automated data and transformation checks
 ```
 
@@ -94,8 +93,6 @@ The available workflow targets are:
 | --- | --- |
 | `make setup` | Install Python, development, and Node dependencies |
 | `make data` | Rebuild and validate processed tables from frozen project inputs |
-| `make database` | Build the generated SQLite database |
-| `make sql` | Build the database and run the hypothesis queries |
 | `make analysis` | Run pitcher models, diagnostics, team comparisons, bridge analysis, and DiD |
 | `make report` | Regenerate figures, Excel, DOCX, and PDF outputs |
 | `make test` | Run the automated test suite |
@@ -103,8 +100,6 @@ The available workflow targets are:
 
 ```bash
 make data
-make database
-make sql
 make analysis
 make report
 make test
@@ -123,7 +118,6 @@ The repository includes processed data so the analysis can be reviewed without r
 - [Processed pitcher data](data/processed/pitcher_stats.csv)
 - [Processed financial panel](data/processed/comparable_teams_financials.csv)
 - [DiD results](data/processed/did_regression_results.csv)
-- [SQL hypothesis queries](sql/hypothesis_queries.sql)
 
 ## Data and interpretation notes
 

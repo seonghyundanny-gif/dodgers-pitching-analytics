@@ -45,8 +45,6 @@ The workflow is split into explicit targets:
 | --- | --- |
 | `make setup` | Install runtime, development, and Node dependencies |
 | `make data` | Rebuild processed pitcher, team, and peer-panel data from frozen inputs and validate them |
-| `make database` | Load the canonical processed tables into the generated SQLite database |
-| `make sql` | Build the database, then execute the documented hypothesis queries |
 | `make analysis` | Run pitcher regressions, diagnostics, team pre/post, bridge, DiD, and event-study code |
 | `make report` | Rebuild charts, the Excel workbook, and PDF/DOCX report outputs |
 | `make test` | Run automated schema, transformation, and result checks |
@@ -54,8 +52,6 @@ The workflow is split into explicit targets:
 
 ```bash
 make data
-make database
-make sql
 make analysis
 make report
 make test
@@ -89,10 +85,10 @@ collect
     ↓
 prepare
   innings conversion, joins, IL aggregation, financial normalization,
-  postseason proxy, validation, SQLite build
+  postseason proxy and validation
     ↓
 analyze
-  SQL summaries, clustered pitcher regressions, bridge analysis,
+  clustered pitcher regressions, bridge analysis,
   DiD, event study
     ↓
 report
